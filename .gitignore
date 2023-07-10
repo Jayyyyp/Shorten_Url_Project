@@ -38,3 +38,5 @@ out/
 
 ### profiles ###
 application-db.yml
+
+application-email.yml

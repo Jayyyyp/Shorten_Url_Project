@@ -1,8 +1,5 @@
 package kr.gamso.service;
 
-<<<<<<< HEAD
-public class UsersServiceTest {
-=======
 import kr.gamso.dto.FindUserDTO;
 import kr.gamso.dto.SaveUserDTO;
 import org.junit.jupiter.api.DisplayName;
@@ -56,5 +53,4 @@ public class UsersServiceTest {
 
         assertFalse(check);
     }
->>>>>>> upstream/dev
 }
