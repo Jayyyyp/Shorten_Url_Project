@@ -27,26 +27,27 @@
 
     <select id="getUserInfoById" resultType="kr.gamso.dto.UserInfoDTO">
         SELECT
-            memberNumber,
+            member_number as memberNumber,
             id,
+            email,
             pw,
-            signupDate
+            signup_date as signupDate
         FROM
             users
         WHERE
             id = #{id}
     </select>
 
-    <select id="getUserInfoById" resultType="kr.gamso.dto.UserInfoDTO">
+    <select id="getUrlInfoByMemberNumber" resultType="kr.gamso.dto.UrlInfoDTO">
         SELECT
-            originalUrl,
-            shortenUrl,
-            memberNumber,
-            shortenDate
+            member_number as memberNumber,
+            original_url as originalUrl,
+            shorten_url as shortenUrl,
+            shorten_date as shortenDate
         FROM
             url
         WHERE
-            memberNumber = #{memberNumber}
+            member_number  = #{memberNumber}
     </select>
 
 </mapper>

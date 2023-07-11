@@ -1,9 +1,6 @@
 package kr.gamso.service;
 
-import kr.gamso.dto.DuplicateCheckIdDTO;
-import kr.gamso.dto.SaveUserDTO;
-import kr.gamso.dto.FindUserDTO;
-import kr.gamso.dto.UserInfoDTO;
+import kr.gamso.dto.*;
 
 import java.util.List;
 
@@ -14,5 +11,7 @@ public interface UsersService {
 
     List<FindUserDTO> findAllUsers();
 
-    UserInfoDTO getUserInfoBy(String id);
+    UserInfoDTO getUserInfoById(String id);
+
+    List<UrlInfoDTO> getUrlInfoByMemberNumber(long memberNumber);
 }

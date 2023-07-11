@@ -2,6 +2,8 @@ package kr.gamso.service;
 
 import kr.gamso.dto.FindUserDTO;
 import kr.gamso.dto.SaveUserDTO;
+import kr.gamso.dto.UrlInfoDTO;
+import kr.gamso.dto.UserInfoDTO;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,5 +54,27 @@ public class UsersServiceTest {
         boolean check = usersService.selectUserId(id);
 
         assertFalse(check);
+    }
+
+    @Test
+    @Transactional
+    @DisplayName("내정보User")
+    public void getUserInfoByIdTest(){
+        String id = "qwe";
+
+        UserInfoDTO user = usersService.getUserInfoById(id);
+
+        assertEquals("bnm@naver.com", user.getEmail());
+    }
+
+    @Test
+    @Transactional
+    @DisplayName("내정보Url")
+    public void getUrlInfoByMemberNumberTest(){
+        long memberNumber =2;
+
+        List<UrlInfoDTO> url = usersService.getUrlInfoByMemberNumber(memberNumber);
+
+        assertEquals("gamso.kr/weq22", url.get(2).getShortenUrl());
     }
 }
