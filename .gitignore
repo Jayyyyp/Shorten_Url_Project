@@ -39,4 +39,4 @@ out/
 ### profiles ###
 application-db.yml
 
-application-email.yml
+application-email.properties
