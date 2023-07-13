@@ -1,6 +1,6 @@
 package kr.gamso.repository;
 
-import kr.gamso.dto.urlDTO.*;
+import kr.gamso.dto.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
