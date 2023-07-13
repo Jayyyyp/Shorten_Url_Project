@@ -1,4 +1,4 @@
-package kr.gamso.dto;
+package kr.gamso.dto.urlDTO;
 
 import lombok.*;
 

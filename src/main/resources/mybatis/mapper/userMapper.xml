@@ -2,21 +2,30 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="kr.gamso.repository.UserRepository">
-    <insert id="saveUser" parameterType="kr.gamso.dto.SaveUserDTO">
-         INSERT INTO users (id, email, pw) VALUES (#{id}, #{email}, #{pw})
+
+    <insert id="saveUser" parameterType="kr.gamso.dto.userDTO.SaveUserDTO">
+         INSERT INTO
+             users (id, email, pw)
+         VALUES
+             (#{id}, #{email}, #{pw})
     </insert>
+
     <select id="selectUserId" parameterType="string" resultType="int">
-        SELECT COUNT(id) FROM users WHERE id = #{id}
+        SELECT
+            COUNT(id)
+        FROM
+            users
+        WHERE id = #{id}
     </select>
 
-    <select id="findAllUsers" resultType="kr.gamso.dto.FindUserDTO">
+    <select id="findAllUsers" resultType="kr.gamso.dto.userDTO.FindUserDTO">
         SELECT
             id, email, pw
         FROM
             users
     </select>
 
-    <select id="findUserById" resultType="kr.gamso.dto.FindUserByIdDTO">
+    <select id="findUserById" resultType="kr.gamso.dto.userDTO.FindUserByIdDTO">
         SELECT
             email, pw, id
         FROM
@@ -25,7 +34,7 @@
             id = #{id}
     </select>
 
-    <select id="getUserInfoById" resultType="kr.gamso.dto.UserInfoDTO">
+    <select id="getUserInfoById" resultType="kr.gamso.dto.userDTO.UserInfoDTO">
         SELECT
             member_number as memberNumber,
             id,
@@ -38,16 +47,5 @@
             id = #{id}
     </select>
 
-    <select id="getUrlInfoByMemberNumber" resultType="kr.gamso.dto.UrlInfoDTO">
-        SELECT
-            member_number as memberNumber,
-            original_url as originalUrl,
-            shorten_url as shortenUrl,
-            shorten_date as shortenDate
-        FROM
-            url
-        WHERE
-            member_number  = #{memberNumber}
-    </select>
 
 </mapper>

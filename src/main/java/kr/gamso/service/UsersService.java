@@ -1,6 +1,8 @@
 package kr.gamso.service;
 
-import kr.gamso.dto.*;
+import kr.gamso.dto.userDTO.SaveUserDTO;
+import kr.gamso.dto.userDTO.FindUserDTO;
+import kr.gamso.dto.userDTO.UserInfoDTO;
 
 import java.util.List;
 

@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 public class Url {
-    private long urlNumber;
     private long memberNumber;
     private String originalUrl;
     private String ShortenUrl;

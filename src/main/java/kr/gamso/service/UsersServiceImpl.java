@@ -1,9 +1,8 @@
 package kr.gamso.service;
 
-import kr.gamso.dto.FindUserDTO;
-import kr.gamso.dto.SaveUserDTO;
-import kr.gamso.dto.UrlInfoDTO;
-import kr.gamso.dto.UserInfoDTO;
+import kr.gamso.dto.userDTO.FindUserDTO;
+import kr.gamso.dto.userDTO.SaveUserDTO;
+import kr.gamso.dto.userDTO.UserInfoDTO;
 import kr.gamso.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +15,7 @@ public class UsersServiceImpl implements UsersService {
     UserRepository userRepository;
 
     @Autowired
-    public UsersServiceImpl(UserRepository userRepository) {
+    public UsersServiceImpl(UserRepository userRepository){
         this.userRepository = userRepository;
     }
 
@@ -24,23 +23,22 @@ public class UsersServiceImpl implements UsersService {
     public void insertUser(SaveUserDTO saveUserDTO) {
         userRepository.saveUser(saveUserDTO);
     }
-
-    @Override
-    public boolean selectUserId(String id) {
-        int count = userRepository.selectUserId(id);
-        return count > 0;
-    }
-
-    @Override
     public List<FindUserDTO> findAllUsers() {
         return userRepository.findAllUsers();
     }
 
+
+    @Override
+    public boolean selectUserId(String id) {
+        int idCnt = userRepository.selectUserId(id);
+        if (idCnt == 0){
+            return true;
+        }
+        return false;
+    }
     @Override
     public UserInfoDTO getUserInfoById(String id) {
         return userRepository.getUserInfoById(id);
     }
-
-
 }
 
