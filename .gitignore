@@ -38,9 +38,4 @@ out/
 
 ### profiles ###
 application-db.yml
-<<<<<<< HEAD
-
 application-email.properties
-=======
-application-email.properties
->>>>>>> 765052fd5813fa6b3bb4395878436d31ee91986b

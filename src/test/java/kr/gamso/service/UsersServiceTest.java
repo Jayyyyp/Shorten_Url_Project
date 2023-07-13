@@ -12,8 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-
 @SpringBootTest
 public class UsersServiceTest {
     @Autowired
@@ -50,9 +48,9 @@ public class UsersServiceTest {
     public void selectUserIDTest(){
         String id = "asd";
 
-        boolean check = usersService.selectUserId(id);
+        long check = usersService.selectUserId(id);
 
-        assertFalse(check);
+        assertEquals(1, check);
     }
 
     @Test

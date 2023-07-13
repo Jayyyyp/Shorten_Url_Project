@@ -14,4 +14,26 @@
         FROM
             users
     </select>
+
+    <select id="findUserById" resultType="kr.gamso.dto.userDTO.FindUserByIdDTO">
+        SELECT
+            email, pw, id
+        FROM
+            users
+        WHERE
+            id = #{id}
+    </select>
+
+    <select id="getUserInfoById" resultType="kr.gamso.dto.userDTO.UserInfoDTO">
+        SELECT
+            member_number as memberNumber,
+            id,
+            email,
+            pw,
+            signup_date as signupDate
+        FROM
+            users
+        WHERE
+            id = #{id}
+    </select>
 </mapper>

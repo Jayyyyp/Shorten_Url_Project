@@ -25,6 +25,8 @@ public class UsersController {
         return "ToS";
     }
 
+
+
     @RequestMapping("/signUp")
     public String goSignUp(){
         return "signUp";
