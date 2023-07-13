@@ -13,7 +13,8 @@ public class EmailServiceTest {
     @Test
     @Transactional
     public void sendSimpleMessageTest() throws Exception {
-        String key = emailService.sendSimpleMessage("jsap50@naver.com");
+        String key;
+        key = emailService.sendSimpleMessage("pjae852@naver.com");
 
         System.out.println(key);
     }
