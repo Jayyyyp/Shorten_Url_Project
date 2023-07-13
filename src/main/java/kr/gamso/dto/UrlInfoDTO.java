@@ -1,17 +1,19 @@
-package kr.gamso.entity;
+package kr.gamso.dto;
+
 
 import lombok.*;
 
 import java.time.LocalDateTime;
+
 @Getter
+@Setter
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Url {
-    private long urlNumber;
-    private long memberNumber;
+public class UrlInfoDTO {
+    private int memberNumber;
     private String originalUrl;
-    private String ShortenUrl;
+    private String shortenUrl;
     private LocalDateTime shortenDate;
 }

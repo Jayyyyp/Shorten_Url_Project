@@ -1,10 +1,15 @@
-package kr.gamso.dto.urlDTO;
+package kr.gamso.dto;
+
 
 import kr.gamso.entity.Url;
 import lombok.*;
 
-@Getter@Setter@ToString
-@AllArgsConstructor@NoArgsConstructor@Builder
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class FindByUrlNumberDTO {
     private long urlNumber;
     private String shortenUrl;

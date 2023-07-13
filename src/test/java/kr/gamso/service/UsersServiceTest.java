@@ -2,6 +2,7 @@ package kr.gamso.service;
 
 import kr.gamso.dto.userDTO.FindUserDTO;
 import kr.gamso.dto.userDTO.SaveUserDTO;
+import kr.gamso.dto.userDTO.UserInfoDTO;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-
 @SpringBootTest
 public class UsersServiceTest {
     @Autowired
@@ -53,4 +52,16 @@ public class UsersServiceTest {
 
         assertEquals(1, check);
     }
+
+    @Test
+    @Transactional
+    @DisplayName("내정보User")
+    public void getUserInfoByIdTest(){
+        String id = "qwe";
+
+        UserInfoDTO user = usersService.getUserInfoById(id);
+
+        assertEquals("bnm@naver.com", user.getEmail());
+    }
+
 }

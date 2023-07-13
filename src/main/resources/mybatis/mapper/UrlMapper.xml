@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="kr.gamso.repository.UrlRepository">
-    <select id="findAllShortenUrl" resultType="kr.gamso.dto.urlDTO.FindAllShortenUrlDTO">
+    <select id="findAllShortenUrl" resultType="kr.gamso.dto.FindAllShortenUrlDTO">
         SELECT
             url_number as urlNumber,
             member_number as memberNumber,
@@ -12,7 +12,7 @@
             url
     </select>
 
-    <select id="findByUrlNumber" resultType="kr.gamso.dto.urlDTO.FindByUrlNumberDTO" parameterType="long">
+    <select id="findByUrlNumber" resultType="kr.gamso.dto.FindByUrlNumberDTO" parameterType="long">
         SELECT
             member_number as memberNumber,
             shorten_url as shortenUrl,
@@ -23,7 +23,7 @@
             url_number = #{urlNumber}
     </select>
 
-    <select id="findByMemberNumber" resultType="kr.gamso.dto.urlDTO.FindByMemberNumberDTO" parameterType="long">
+    <select id="findByMemberNumber" resultType="kr.gamso.dto.FindByMemberNumberDTO" parameterType="long">
         SELECT
             url_number as urlNumer,
             shorten_url as shortenUrl,
@@ -34,7 +34,7 @@
             member_number = #{memberNumber}
     </select>
 
-    <insert id="saveShortenUrl" parameterType="kr.gamso.dto.urlDTO.InsertShortenUrlDTO">
+    <insert id="saveShortenUrl" parameterType="kr.gamso.dto.InsertShortenUrlDTO">
         INSERT INTO url
                 (member_number, original_url, shorten_url)
                 VALUES
@@ -48,7 +48,7 @@
             shorten_url = #{shortenUrl}
     </delete>
 
-    <update id="updateShortenUrl" parameterType="kr.gamso.dto.urlDTO.UpdateShortenUrlDTO">
+    <update id="updateShortenUrl" parameterType="kr.gamso.dto.UpdateShortenUrlDTO">
         UPDATE
                 url
             SET

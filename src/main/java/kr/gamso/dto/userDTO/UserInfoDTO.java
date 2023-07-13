@@ -1,12 +1,12 @@
-package kr.gamso.entity;
+package kr.gamso.dto.userDTO;
 
 import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Getter@ToString
+@Getter@Setter@ToString
 @AllArgsConstructor@NoArgsConstructor@Builder
-public class Users {
+public class UserInfoDTO {
     private long memberNumber;
     private String id;
     private String email;

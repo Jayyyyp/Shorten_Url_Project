@@ -1,6 +1,6 @@
 package kr.gamso.service;
 
-import kr.gamso.dto.urlDTO.*;
+import kr.gamso.dto.*;
 import kr.gamso.repository.UrlRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

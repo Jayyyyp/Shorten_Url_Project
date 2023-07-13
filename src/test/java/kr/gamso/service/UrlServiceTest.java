@@ -1,9 +1,9 @@
 package kr.gamso.service;
 
-import kr.gamso.dto.urlDTO.FindAllShortenUrlDTO;
-import kr.gamso.dto.urlDTO.FindByMemberNumberDTO;
-import kr.gamso.dto.urlDTO.FindByUrlNumberDTO;
-import kr.gamso.dto.urlDTO.InsertShortenUrlDTO;
+import kr.gamso.dto.FindAllShortenUrlDTO;
+import kr.gamso.dto.FindByMemberNumberDTO;
+import kr.gamso.dto.FindByUrlNumberDTO;
+import kr.gamso.dto.InsertShortenUrlDTO;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

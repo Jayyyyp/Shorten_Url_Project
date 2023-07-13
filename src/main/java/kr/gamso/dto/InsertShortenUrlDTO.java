@@ -1,16 +1,21 @@
-package kr.gamso.dto.urlDTO;
+package kr.gamso.dto;
+
 
 import kr.gamso.entity.Url;
 import lombok.*;
 
-@Getter@Setter@ToString
-@AllArgsConstructor@NoArgsConstructor@Builder
-public class FindByMemberNumberDTO {
+@Getter
+@Setter
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class InsertShortenUrlDTO {
     private long memberNumber;
     private String originalUrl;
     private String shortenUrl;
 
-    public void FindByMemberNumberDto(Url url){
+    public InsertShortenUrlDTO(Url url){
         this.memberNumber = url.getMemberNumber();
         this.originalUrl = url.getOriginalUrl();
         this.shortenUrl = url.getShortenUrl();

@@ -3,7 +3,7 @@
 
 <mapper namespace="kr.gamso.repository.UserRepository">
     <insert id="saveUser" parameterType="kr.gamso.dto.userDTO.SaveUserDTO">
-         INSERT INTO users (id, email, pw) VALUES (#{id}, #{email}, #{pw})
+        INSERT INTO users (id, email, pw) VALUES (#{id}, #{email}, #{pw})
     </insert>
     <select id="selectUserId" parameterType="string" resultType="int">
         SELECT COUNT(id) FROM users WHERE id = #{id}
@@ -13,5 +13,27 @@
             id, email, pw
         FROM
             users
+    </select>
+
+    <select id="findUserById" resultType="kr.gamso.dto.userDTO.FindUserByIdDTO">
+        SELECT
+            email, pw, id
+        FROM
+            users
+        WHERE
+            id = #{id}
+    </select>
+
+    <select id="getUserInfoById" resultType="kr.gamso.dto.userDTO.UserInfoDTO">
+        SELECT
+            member_number as memberNumber,
+            id,
+            email,
+            pw,
+            signup_date as signupDate
+        FROM
+            users
+        WHERE
+            id = #{id}
     </select>
 </mapper>

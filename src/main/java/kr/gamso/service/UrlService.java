@@ -1,6 +1,6 @@
 package kr.gamso.service;
 
-import kr.gamso.dto.urlDTO.*;
+import kr.gamso.dto.*;
 
 import java.util.List;
 

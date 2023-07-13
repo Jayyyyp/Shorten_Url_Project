@@ -1,6 +1,6 @@
 package kr.gamso.repository;
 
-import kr.gamso.dto.urlDTO.*;
+import kr.gamso.dto.*;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

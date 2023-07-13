@@ -1,6 +1,6 @@
 package kr.gamso.controller;
 
-import kr.gamso.dto.userDTO.DuplicateCheckIdDTO;
+import kr.gamso.dto.DuplicateCheckIdDTO;
 import kr.gamso.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,14 +19,14 @@ public class UserRestController {
         this.usersService = usersService;
     }
 
-    @RequestMapping(value = "/{id}" ,method = RequestMethod.GET)
-    public ResponseEntity<DuplicateCheckIdDTO> duplicateCheckId(@PathVariable String id){
-        int checkCnt = usersService.selectUserId(id);
-
-        DuplicateCheckIdDTO duplicateCheckIdDTO = DuplicateCheckIdDTO.builder()
-                .checkCnt(checkCnt)
-                .build();
-
-        return  ResponseEntity.ok(duplicateCheckIdDTO);
-    }
+//    @RequestMapping(value = "/{id}" ,method = RequestMethod.GET)
+//    public ResponseEntity<DuplicateCheckIdDTO> duplicateCheckId(@PathVariable String id){
+//        int checkCnt = usersService.selectUserId(id);
+//
+//        DuplicateCheckIdDTO duplicateCheckIdDTO = DuplicateCheckIdDTO.builder()
+//                .checkCnt(checkCnt)
+//                .build();
+//
+//        return  ResponseEntity.ok(duplicateCheckIdDTO);
+//    }
 }

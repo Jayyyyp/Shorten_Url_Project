@@ -15,7 +15,7 @@
 						<li class="opener">
 							<a href="#" class ="signInId">id</a>
 							<ul>
-								<li><a href="#">내 정보</a></li>
+								<li><a href="myPage">내 정보</a></li>
 								<li><a href="#">아이디/비밀번호 변경</a></li>
 								<li><a href="#">설정</a></li>
 								<li><a href="#">로그아웃</a></li>
