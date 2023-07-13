@@ -79,17 +79,6 @@ public class UsersRepositoryTest {
         assertEquals("bnm@naver.com", user.getEmail());
     }
 
-    @Test
-    @Transactional
-    @DisplayName("내정보Url")
-    public void getUrlInfoByMemberNumberTest(){
-        long memberNumber =2;
-
-        List<UrlInfoDTO> url = userRepository.getUrlInfoByMemberNumber(memberNumber);
-
-        assertEquals("gamso.kr/weq22", url.get(2).getShortenUrl());
-    }
-
 
 }
 

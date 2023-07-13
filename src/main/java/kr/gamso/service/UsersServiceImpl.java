@@ -41,10 +41,6 @@ public class UsersServiceImpl implements UsersService {
         return userRepository.getUserInfoById(id);
     }
 
-    @Override
-    public List<UrlInfoDTO> getUrlInfoByMemberNumber(long memberNumber) {
-        return userRepository.getUrlInfoByMemberNumber(memberNumber);
-    }
 
 }
 

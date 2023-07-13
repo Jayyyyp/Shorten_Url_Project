@@ -2,7 +2,7 @@ package kr.gamso.entity;
 
 import lombok.*;
 
-@Getter@ToString
+@Getter@ToString@Setter
 @AllArgsConstructor@NoArgsConstructor@Builder
 public class Users {
     private long memberNumber;

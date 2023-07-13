@@ -3,7 +3,6 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>당신의 url을 단축해보세요</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="${path}/css/main.css" type="text/css"/>
@@ -31,20 +30,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-
                     <!-- 내 정보를 노출할 컨텐츠 -->
                     <article class="box post">
                         <header>
                             <h2>내 정보</h2>
-                            <p>회원 정보</p>
                         </header>
                         <ul>
-                            <li><strong>회원아이디:</strong> ${userInfo.id}</li>
-                            <li><strong>회원이메일:</strong> ${userInfo.email}</li>
+                            <li><strong>아이디:</strong> ${userInfo.id}</li>
+                            <li><strong>이메일:</strong> ${userInfo.email}</li>
                             <li><strong>회원가입날짜:</strong>  ${userInfo.signupDate}</li>
                         </ul>
                     </article>
-
+                    <!-- 내 Url을 노출할 컨텐츠 -->
+                    <article class="box post">
+                        <header>
+                            <h2>내 Url</h2>
+                        </header>
+                        <ul>
+                            <c:forEach var="urlInfo" items="${urlInfoList}">
+                                <li>
+                                    <strong>기존url:</strong> ${urlInfo.originalUrl}
+                                    <strong>단축된url:</strong> ${urlInfo.shortenUrl}
+                                </li>
+                            </c:forEach>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </div>

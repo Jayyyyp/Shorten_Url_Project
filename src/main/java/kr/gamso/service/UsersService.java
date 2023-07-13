@@ -13,5 +13,4 @@ public interface UsersService {
 
     UserInfoDTO getUserInfoById(String id);
 
-    List<UrlInfoDTO> getUrlInfoByMemberNumber(long memberNumber);
 }
