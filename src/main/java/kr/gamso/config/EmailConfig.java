@@ -23,6 +23,7 @@ public class EmailConfig {
 
     @Bean
     public JavaMailSender javaMailService() {
+        System.out.println(id);
         JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
 
         javaMailSender.setHost(host); // smtp 서버 주소
